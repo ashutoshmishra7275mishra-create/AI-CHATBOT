@@ -1,25 +1,46 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MY AI chatbot</title>
+    <title>My AI Chatbot</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Markdown formatting and sanitization -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
 </head>
 <body>
-    <div class="chat-container">
+
+    <div class="chat-container" id="chatContainer">
         <div class="ai-chat-box">
-            <img src="ai.png" alt="" id="
-            aiImage" width="10%">
+            <img src="ai.png" alt="AI" id="aiImage" width="10%">
             <div class="ai-chat-area">
-                Hello ! How can you help.?
+                Hello! How can I help you?
+            </div>
         </div>
-        <div class="prompt-area">
-            <input type="text" id="prompt" placeholder="Message...">
-            <button id="image"><image src="img.svg" alt="" >
-                <input type="file" accept="images/*" hidden></button>
-            <button id="submit"><image src="submit.svg" alt="" ></button>
-        </div>
+    </div>
+
+    <div class="prompt-area">
+        <input
+            type="text"
+            id="prompt"
+            placeholder="Message..."
+            autocomplete="off"
+        >
+
+        <button type="button" id="image" aria-label="Upload image">
+            <img src="img.svg" alt="Upload">
+            <input type="file" accept="image/*" hidden>
+        </button>
+
+        <button type="button" id="submit" aria-label="Send message">
+            <img src="submit.svg" alt="Send">
+        </button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
