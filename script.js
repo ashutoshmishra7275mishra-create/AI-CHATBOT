@@ -6,7 +6,7 @@ const imageinput = imagebtn.querySelector('input[type="file"]');
 const chatContainer = document.getElementById("chatContainer");
 const image = imagebtn.querySelector("img");
 
-const API_URL = "http://localhost:5000/api/chat";
+const API_URL = "https://ai-chatbot-backend-img7.onrender.com/api/chat";
 
 const user = {
     file: {
